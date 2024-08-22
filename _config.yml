@@ -1,3 +1,7 @@
 exclude:
   - node_modules
-  
+  - vendor/bundle
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .github
