@@ -43,8 +43,6 @@ router.post('/bulk', async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
-// Get all products
 router.get('/', async (req, res) => {
   try {
     const products = await Product.find();
@@ -53,7 +51,6 @@ router.get('/', async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
 // Get product by ID
 router.get('/:id', async (req, res) => {
   try {

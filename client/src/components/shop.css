@@ -1,0 +1,48 @@
+.products-list {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  overflow: hidden; /* Hide any overflowing content */
+  padding: 20px;
+  gap: 20px; /* Space between items */
+}
+
+.product-item {
+  flex: 1 1 calc(20% - 20px); /* Adjust width of items and account for gaps */
+  box-sizing: border-box; /* Ensure padding and border are included in width */
+  min-width: 200px; /* Minimum width of items to control wrapping */
+}
+
+  
+  .product-item img {
+    border-radius: 5px;
+    width: 150px; /* Adjust the size as needed */
+    height: 150px; /* Adjust the size as needed */
+    object-fit: cover; /* Ensures the image covers the box while preserving its aspect ratio */
+  }
+ /* Modern Add to Cart Button */
+.add-to-cart-button {
+  background-color: #28a745; /* Green background color */
+  color: white; /* White text color */
+  border: none; /* Remove border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 12px 20px; /* Padding for size */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+  outline: none; /* Remove default focus outline */
+}
+
+.add-to-cart-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.add-to-cart-button:active {
+  background-color: #1e7e34; /* Even darker green when clicked */
+  transform: scale(0.98); /* Slightly shrink the button when clicked */
+}
+
+.add-to-cart-button:focus {
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.5); /* Focus shadow */
+}
+ 

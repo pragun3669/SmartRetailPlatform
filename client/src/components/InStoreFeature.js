@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import QRCode from 'qrcode.react';
-import './InStoreFeature.css'; // Add your CSS file for styling
+import './InStoreFeature.css';
 
 const InStoreFeature = () => {
   const [products, setProducts] = useState([]);
@@ -11,25 +11,29 @@ const InStoreFeature = () => {
   useEffect(() => {
     // Fetch products from the backend
     axios.get('http://localhost:8080/api/products')
-      .then(response => {
+      .then((response) => {
         setProducts(response.data);
       })
-      .catch(error => {
+      .catch((error) => {
         console.error('Error fetching products:', error);
       });
   }, []);
 
   const handleImageClick = (product) => {
     setSelectedProduct(product);
-    setQrCodeData(`http://localhost:8080/api/products/${product._id}`);
+    setQrCodeData(`http://localhost:3000/products/${product._id}`); // URL to product details page
   };
 
   return (
     <div className="instore-feature">
       <h2>In-Store Features</h2>
       <div className="product-gallery">
-        {products.map(product => (
-          <div key={product._id} className="product-item" onClick={() => handleImageClick(product)}>
+        {products.map((product) => (
+          <div
+            key={product._id}
+            className="product-item"
+            onClick={() => handleImageClick(product)}
+          >
             <img src={product.images} alt={product.name} />
             <p>{product.name}</p>
           </div>
@@ -55,4 +59,3 @@ const InStoreFeature = () => {
 };
 
 export default InStoreFeature;
-

@@ -18,7 +18,7 @@ const productSchema = mongoose.Schema({
     required: true,
   },
   images: {
-    type: String, // Store a single image URL or file path
+    type: [String], // Store a single image URL or file path
     required: false, // Not required; some products may not have an image
   },
   category: {

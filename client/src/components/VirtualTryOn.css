@@ -1,0 +1,180 @@
+
+
+.virtual-try-on-container {
+    display: flex;
+    margin: 20px;
+    align-items: flex-start;
+  }
+  
+  .webcam-container {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .capture-button {
+    background-color: #4CAF50; /* Green background */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .capture-button:hover {
+    background-color: #45a049;
+  }
+  
+  .image-overlay-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .image-overlay-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 640px; /* Match the width of the webcam capture */
+    height: 480px; /* Match the height of the webcam capture */
+    overflow: hidden;
+  }
+  
+  .captured-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .overlay-image {
+    position: absolute;
+    cursor: grab;
+    max-width: 200px; /* Constrain the size */
+    max-height: 200px; /* Constrain the size */
+    object-fit: contain; /* Ensure image is not distorted */
+  }
+  
+  .overlay-selector {
+    flex: 0 0 200px;
+    border-left: 1px solid #ddd;
+    padding-left: 20px;
+  }
+  
+  .overlay-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .overlay-thumbnail {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    margin: 10px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+  
+  .overlay-thumbnail:hover {
+    border-color: #4CAF50;
+  }
+  /* VirtualTryOn.css */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 20px;
+  }
+  
+  .camera-section {
+    flex: 1;
+    margin-right: 20px;
+    text-align: center;
+  }
+  
+  .camera-section h1 {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+  }
+  
+  .camera-section .webcam {
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    margin-bottom: 10px;
+  }
+  
+  .camera-section button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .camera-section button:hover {
+    background-color: #0056b3;
+  }
+  
+  .camera-section .captured-image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .camera-section .captured-image {
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .camera-section .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: auto;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+  }
+  
+  .overlay-selection {
+    flex: 0 0 200px;
+    border-left: 1px solid #ddd;
+    padding-left: 20px;
+  }
+  
+  .overlay-selection h2 {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+  }
+  
+  .overlay-selection .overlay-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .overlay-selection .overlay-option {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .overlay-selection .overlay-option:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.2);
+  }
+  
