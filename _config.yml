@@ -1,7 +1,3 @@
 exclude:
   - node_modules
-  - vendor
-  - Gemfile
-  - Gemfile.lock
-  - .bundle
-  - other_unwanted_directories/
+  
